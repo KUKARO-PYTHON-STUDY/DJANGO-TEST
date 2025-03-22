@@ -1,0 +1,16 @@
+{
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "jupyter.askForKernelRestart": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": false,
+    "python.envFile": "${workspaceFolder}/.env",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    }
+}

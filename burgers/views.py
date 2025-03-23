@@ -11,3 +11,17 @@ def burger_list(request: HttpRequest):
     context = {"burgers": burgers}
 
     return render(request, "burger_list.html", context=context)
+
+
+def burger_search(request: HttpRequest):
+    keyword = request.GET.get("keyword", "")
+    print(keyword)
+
+    burgers = Burger.objects.filter(name__contains=keyword)
+    print(burgers)
+
+    context = {
+        "burgers": burgers,
+    }
+
+    return render(request, "burger_search.html", context=context)

@@ -12,4 +12,4 @@ class Burger(models.Model):
         return str(self.name)
 
     def __repr__(self) -> str:
-        return super().__str__()
+        return self.__str__()

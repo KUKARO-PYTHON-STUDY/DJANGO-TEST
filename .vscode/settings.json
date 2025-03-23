@@ -12,5 +12,9 @@
     "python.envFile": "${workspaceFolder}/.env",
     "editor.codeActionsOnSave": {
         "source.fixAll": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "[django-html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }

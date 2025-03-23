@@ -6,5 +6,5 @@ from burgers.models import Burger
 
 
 @admin.register(Burger)
-class BurgetAdmin(admin.ModelAdmin):
+class BurgerAdmin(admin.ModelAdmin):
     pass

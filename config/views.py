@@ -1,9 +1,10 @@
 from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render
 
 
 def main(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("Hello, world!")
+    return render(request, "main.html")
 
 
 def burger_list(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("pyburger의 햄버거 목록입니다")
+    return render(request, "burger_list.html")

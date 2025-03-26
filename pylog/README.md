@@ -15,3 +15,9 @@ django-admin startproject config .
 ```
 
 - 프로젝트 시작
+
+```shell
+python manage.py runserver
+```
+
+- 파이썬 서버 동작

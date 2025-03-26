@@ -15,3 +15,9 @@ django-admin startproject config .
 ```
 
 - 프로젝트 시작
+
+```shell
+python manage.py startapp blog
+```
+
+- blog 앱 성성

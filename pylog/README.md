@@ -32,4 +32,16 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-- 실제 db에 영향을 미침
+- 실제 db에 변경사항을 적용함
+
+```shell
+python manage.py createsuperuser
+```
+
+- 슈퍼 유저를 만든다
+
+```shell
+python manage.py runserver
+```
+
+- 서버를 시작

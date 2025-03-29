@@ -1,22 +1,35 @@
 {
-    "liveServer.settings.donotVerifyTags": true,
-    "security.workspace.trust.untrustedFiles": "open",
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-    "jupyter.askForKernelRestart": false,
-    "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.envFile": "${workspaceFolder}/.env",
-    "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit"
-    },
-    "python.formatter.provider": "autopep8",
-    "python.formatter.autopep8Args": ["--max-line-length=120"],
-    "python.formatting.provider": "autopep8",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "jupyter.askForKernelRestart": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.envFile": "${workspaceFolder}/.env",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "python.formatting.provider": "ruff",
+  "editor.formatOnSave": true,
+  "[django-html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.languageServer": "Pylance",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.insertSpaces": true,
     "editor.formatOnSave": true,
-    "[django-html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit",
+      "editor.insertSpaces": "explicit"
     }
+  },
+  "python.analysis.typeCheckingMode": "off",
+  "ruff.importStrategy": "fromEnvironment",
+  "python.analysis.extraPaths": ["./pylog"]
 }

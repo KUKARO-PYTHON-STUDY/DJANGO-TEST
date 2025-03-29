@@ -27,7 +27,7 @@ indent-width = 4
 
 [lint]
 # 기본적으로 Pyflakes('F')와 pycodestyle('E') 코드의 하위 집합을 활성화합니다.
-select = ["E4", "E7", "E9", "F"]
+select = ["E4", "E7", "E9", "F", "ANN", "PYI"]
 ignore = []
 
 # 활성화된 모든 규칙에 대한 수정 허용.

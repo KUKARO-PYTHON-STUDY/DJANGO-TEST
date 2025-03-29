@@ -18,6 +18,11 @@
           <li>아직 댓글이 없습니다.</li>
           {% endfor %}
         </ol>
+        {% if post.thumbnail %}
+        <img src="{{post.thumbnail.url}}" alt="" width="400" />
+        {% else %}
+        <p>No thumbnail available</p>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>

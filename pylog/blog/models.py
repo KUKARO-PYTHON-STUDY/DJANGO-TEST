@@ -6,7 +6,11 @@ from django.db import models
 class Post(models.Model):
     title: models.CharField = models.CharField("포스트 제목", max_length=100)
     content: models.TextField = models.TextField("포스트 내용")
-    thumbnail: models.ImageField = models.ImageField("썸네일 이미지", upload_to="post", blank=True)
+    thumbnail: models.ImageField = models.ImageField(
+        "썸네일 이미지",
+        upload_to="post",
+        blank=True,
+    )
 
     def __str__(self) -> str:
         return f"Post(title={self.title}, content={self.content}, thumbnail={self.thumbnail})"

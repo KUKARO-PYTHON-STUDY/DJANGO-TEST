@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <h1>Post Detail</h1>
+    <p>{{post_id}}</p>
+    <div>
+      <h1>{{post.title}}</h1>
+      <p>{{post.content}}</p>
+      <ol>
+        {% for comment in post.comment_set.all %}
+        <li>{{comment}}</li>
+        {% empty %}
+        <li>아직 댓글이 없습니다.</li>
+        {% endfor %}
+      </ol>
+      {% if post.thumbnail %}
+      <img src="{{post.thumbnail.url}}" alt="" width="400" />
+      {% else %}
+      <p>No thumbnail available</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

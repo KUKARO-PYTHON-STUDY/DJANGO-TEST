@@ -9,20 +9,7 @@
     <ul>
       {% for post in posts %}
       <li>
-        <h2>{{post.title}}</h2>
-        <p>{{post.content}}</p>
-        <ol>
-          {% for comment in post.comment_set.all %}
-          <li>{{comment}}</li>
-          {% empty %}
-          <li>아직 댓글이 없습니다.</li>
-          {% endfor %}
-        </ol>
-        {% if post.thumbnail %}
-        <img src="{{post.thumbnail.url}}" alt="" width="400" />
-        {% else %}
-        <p>No thumbnail available</p>
-        {% endif %}
+        <a href="/posts/{{post.id}}">{{post.title}}</a>
       </li>
       {% endfor %}
     </ul>

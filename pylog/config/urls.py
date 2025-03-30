@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from blog.views import post_detail, post_list
+from blog.views import post_add, post_detail, post_list
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -23,7 +23,7 @@ from django.urls import path
 
 from config.views import index
 
-static_url_patters = static(
+static_url_patterns = static(
     prefix=settings.MEDIA_URL,
     document_root=settings.MEDIA_ROOT,
 )
@@ -33,4 +33,5 @@ urlpatterns = [
     path("", index),
     path("posts/", post_list),
     path("posts/<int:post_id>/", post_detail),
-] + static_url_patters
+    path("posts/add/", post_add),
+] + static_url_patterns

@@ -2,8 +2,8 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 
 
-def login_view(request: HttpRequest) -> HttpResponse:
+def feeds(request: HttpRequest) -> HttpResponse:
     user = request.user
     if user.is_authenticated:
-        return redirect("/posts/feeds/")
-    return render(request, "users/login.html")
+        return redirect("/users/login/")
+    return render(request, "posts/feeds.html")

@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Post Add</h1>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
       <div>
         <label>제목</label>
@@ -16,7 +16,11 @@
         <label>내용</label>
         <textarea name="content" required></textarea>
       </div>
-      <button type="submit">작업</button>
+      <div>
+        <label>썸네일</label>
+        <input name="thumbnail" type="file" />
+      </div>
+      <button type="submit">작성</button>
     </form>
   </body>
 </html>

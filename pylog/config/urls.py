@@ -23,7 +23,7 @@ from django.urls import path
 
 from config.views import index
 
-static_url_patters = static(
+static_url_patterns = static(
     prefix=settings.MEDIA_URL,
     document_root=settings.MEDIA_ROOT,
 )
@@ -34,4 +34,4 @@ urlpatterns = [
     path("posts/", post_list),
     path("posts/<int:post_id>/", post_detail),
     path("posts/add/", post_add),
-] + static_url_patters
+] + static_url_patterns

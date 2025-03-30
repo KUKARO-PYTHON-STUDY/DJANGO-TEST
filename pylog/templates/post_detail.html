@@ -17,6 +17,11 @@
         <li>아직 댓글이 없습니다.</li>
         {% endfor %}
       </ol>
+      <form method="POST">
+        {%csrf_token%}
+        <textarea name="comment" required></textarea>
+        <button type="submit">댓글 작성</button>
+      </form>
       {% if post.thumbnail %}
       <img src="{{post.thumbnail.url}}" alt="" width="400" />
       {% else %}

@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 
@@ -30,6 +30,7 @@ def login_view_post(request: HttpRequest) -> HttpResponse:
             return redirect("/posts/feeds")
         else:
             print("로그인에 실패했습니다")
+            form.add_error(None, "입력한 자격증명에 해당하는 사용자가 없습니다")
 
     context = {"form": form}
     return render(request, "users/login.html", context)
@@ -39,3 +40,8 @@ def login_view_get(request: HttpRequest) -> HttpResponse:
     form = LoginForm()
     context = {"form": form}
     return render(request, "users/login.html", context)
+
+
+def logout_view(request: HttpRequest) -> HttpResponse:
+    logout(request)
+    return redirect(("/users/login/"))

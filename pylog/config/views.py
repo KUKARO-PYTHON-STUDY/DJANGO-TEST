@@ -1,6 +1,9 @@
-from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
+from django.shortcuts import redirect
 
 
 def index(request: HttpRequest) -> HttpResponse:
-    return render(request, "index.html")
+    user = request.user
+    if user.is_authenticated:
+        return redirect("/posts/feeds/")
+    return redirect("/users/login/")

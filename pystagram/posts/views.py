@@ -4,6 +4,6 @@ from django.shortcuts import redirect, render
 
 def feeds(request: HttpRequest) -> HttpResponse:
     user = request.user
-    if user.is_authenticated:
+    if not user.is_authenticated:
         return redirect("/users/login/")
     return render(request, "posts/feeds.html")
